@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Manrope, "Segoe UI", sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--starter-text);
+	background: radial-gradient(circle at top right, #e6edf9 0%, var(--starter-bg) 48%, #eef2f8 100%);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	line-height: 1.25;
+	color: var(--starter-heading);
+	font-family: Lora, Georgia, serif;
+}
+
+a {
+	color: var(--starter-accent);
+	transition: color var(--starter-transition);
+
+	&:hover,
+	&:focus-visible {
+		color: var(--starter-accent-hover);
+	}
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}

@@ -1,0 +1,45 @@
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+	width: 100%;
+	padding: 0.66rem 0.72rem;
+	border: 1px solid #cbd5e1;
+	border-radius: var(--starter-radius-sm);
+	background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 2px solid #bfdbfe;
+	outline-offset: 0;
+	border-color: #60a5fa;
+}
+
+.button,
+button,
+input[type="submit"],
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.wc-block-components-button {
+	padding: 0.62rem 1rem;
+	border: 0;
+	border-radius: var(--starter-radius-sm);
+	background: var(--starter-accent);
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color var(--starter-transition);
+
+	&:hover,
+	&:focus-visible {
+		background: var(--starter-accent-hover);
+		color: #fff;
+	}
+}

@@ -1,0 +1,165 @@
+.container {
+	width: min(var(--starter-max-width), 92%);
+	margin-inline: auto;
+}
+
+.site-header {
+	background: rgb(255 255 255 / 92%);
+	backdrop-filter: blur(6px);
+	border-bottom: 1px solid var(--starter-border);
+	padding: 0.9rem 0;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		align-items: center;
+		gap: 1rem;
+	}
+}
+
+.site-title {
+	display: inline-block;
+	text-decoration: none;
+	font-family: Lora, Georgia, serif;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	color: #111827;
+}
+
+.site-nav {
+	display: flex;
+	align-items: center;
+
+	&--primary {
+		justify-content: center;
+	}
+
+	&--secondary {
+		justify-content: flex-end;
+		gap: 0.6rem;
+	}
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.35rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	a {
+		display: inline-block;
+		padding: 0.42rem 0.72rem;
+		border-radius: 999px;
+		color: #1f2a44;
+		font-size: 0.95rem;
+		font-weight: 600;
+		text-decoration: none;
+
+		&:hover,
+		&:focus-visible {
+			background: #eaf1ff;
+			color: #0b46a6;
+		}
+	}
+}
+
+.site-cart-link {
+	display: inline-block;
+	padding: 0.5rem 0.84rem;
+	border-radius: 999px;
+	background: #eaf1ff;
+	color: #0d47b8;
+	font-size: 0.95rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.site-main {
+	min-height: 64vh;
+	padding: 2rem 0 2.4rem;
+}
+
+.front-page {
+	padding: 2rem 0;
+
+	&__header {
+		margin-bottom: 1.2rem;
+
+		h1 {
+			margin-bottom: 0.3rem;
+		}
+
+		p {
+			margin: 0;
+			color: var(--starter-muted);
+		}
+	}
+}
+
+.page-content article,
+.index-content article,
+.single-post article,
+.front-page article {
+	padding: 1.35rem;
+	border: 1px solid var(--starter-border);
+	border-radius: var(--starter-radius);
+	background: var(--starter-surface);
+	box-shadow: var(--starter-shadow);
+}
+
+.site-footer {
+	padding: 1.4rem 0 2.1rem;
+
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		padding-top: 1.15rem;
+		border-top: 1px solid var(--starter-border);
+	}
+
+	.menu a {
+		padding: 0.25rem 0.55rem;
+	}
+
+	&__copyright {
+		margin: 0;
+		color: var(--starter-muted);
+		font-size: 0.92rem;
+	}
+}
+
+@media (width <= 980px) {
+	.site-header {
+		&__inner {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+	}
+
+	.site-nav {
+		&--primary,
+		&--secondary {
+			justify-content: center;
+		}
+	}
+}
+
+@media (width <= 640px) {
+	.site-main {
+		padding-top: 1.35rem;
+	}
+
+	.page-content article,
+	.index-content article,
+	.single-post article,
+	.front-page article {
+		padding: 0.95rem;
+	}
+}

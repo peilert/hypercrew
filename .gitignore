@@ -1,0 +1,43 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.history/
+*.sublime-workspace
+*.sublime-project
+sftp-config.json
+
+# Dependencies
+node_modules/
+bower_components/
+
+# Build cache / tooling
+.grunt/
+.cache/
+.sass-cache/
+.eslintcache
+.stylelintcache
+coverage/
+dist/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local WordPress / environment artifacts
+/.htaccess
+/local-xdebuginfo.php
+/wp-config.php
+/wp-content/debug.log
+/wp-content/cache/
+/wp-content/upgrade/
+/wp-content/backups/
+/wp-content/backup-db/
+/wp-content/object-cache.php
+/wp-content/advanced-cache.php
+
+# Temporary exports
+*.sql
+*.zip
