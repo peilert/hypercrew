@@ -1,5 +1,13 @@
 # Notatka techniczna - zadanie rekrutacyjne EduCraft
 
+Ta część zajęła mi realnie około 3-4 godzin pracy.
+
+Największym wyzwaniem był checkout WooCommerce, zwłaszcza warunkowe dodanie pola NIP tylko dla produktów B2B i poprawna walidacja po stronie serwera. Przy większej ilości czasu wydzieliłbym logikę biznesową checkoutu do osobnego pluginu i dołożył testy automatyczne.
+
+Motyw wybrałem dlatego, że większość zakresu dotyczyła widoków, CPT i integracji z WooCommerce/ACF, więc to było najszybsze i najprostsze rozwiązanie. Filtrowanie zrobiłem w oparciu o fetch i admin-ajax.php, bo to lekki i wystarczający mechanizm dla tego typu zadania. Walidację NIP zaimplementowałem własnym kodem, bo algorytm jest prosty, a dzięki temu nie trzeba było dodawać zewnętrznej biblioteki.
+
+Korzystałem z WordPressa, WooCommerce, ACF, PHP, JavaScript, SCSS, Local WP, npm/webpack oraz narzędzi AI pomocniczo do analizy rozwiązań i przyspieszenia pracy.
+
 ## 1) Dlaczego w motywie (a nie plugin)
 Rozwiazanie zostalo osadzone programistycznie w motywie `woocommerce-starter-theme`, bo zadanie dopuszcza oba podejscia. W tym wariancie latwiej od razu powiazac CPT z gotowymi template'ami (`single` i `archive`) bez dodatkowego mapowania widokow.
 
@@ -39,12 +47,3 @@ Logika biznesowa:
 
 ### Dlaczego walidator wlasny (bez biblioteki)
 Wybrany zostal wlasny walidator, bo algorytm NIP jest krotki i jednoznaczny, a tutaj priorytetem jest prostota wdrozenia i brak dodatkowych zaleznosci.
-
-
-Ta część zajęła mi realnie około 3-4 godzin pracy.
-
-Największym wyzwaniem był checkout WooCommerce, zwłaszcza warunkowe dodanie pola NIP tylko dla produktów B2B i poprawna walidacja po stronie serwera. Przy większej ilości czasu wydzieliłbym logikę biznesową checkoutu do osobnego pluginu i dołożył testy automatyczne.
-
-Motyw wybrałem dlatego, że większość zakresu dotyczyła widoków, CPT i integracji z WooCommerce/ACF, więc to było najszybsze i najprostsze rozwiązanie. Filtrowanie zrobiłem w oparciu o fetch i admin-ajax.php, bo to lekki i wystarczający mechanizm dla tego typu zadania. Walidację NIP zaimplementowałem własnym kodem, bo algorytm jest prosty, a dzięki temu nie trzeba było dodawać zewnętrznej biblioteki.
-
-Korzystałem z WordPressa, WooCommerce, ACF, PHP, JavaScript, SCSS, Local WP, npm/webpack oraz narzędzi AI pomocniczo do analizy rozwiązań i przyspieszenia pracy.
